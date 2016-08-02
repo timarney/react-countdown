@@ -27,16 +27,7 @@ var config = {
         loader: 'babel'
       }
     ]
-  }, plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      }
-    })
-  ]
+  }, plugins: [ ]
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -46,6 +37,16 @@ if (process.env.NODE_ENV === 'production') {
   config.plugins.push(new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': '"production"'
+    }
+  }))
+
+  config.plugins.push(new webpack.optimize.OccurrenceOrderPlugin(true))
+  config.plugins.push(new webpack.optimize.DedupePlugin())
+
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: true,
+      screw_ie8: true
     }
   }))
 }

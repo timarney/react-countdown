@@ -38,6 +38,9 @@ class AppState {
 
   getTimeRemaining () {
     this.timer = Date.parse(this.deadline) - Date.parse(new Date())
+    if (this.timer === 0) {
+      clearInterval(this.interval)
+    }
   }
 
   /* Util */
