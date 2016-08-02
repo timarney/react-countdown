@@ -14,6 +14,9 @@ const { object, string } = React.PropTypes
           <Unit type='minutes' store={store} />:
           <Unit type='seconds' store={store} />
         </div>
+        <div className='code'>
+          <a href='https://github.com/timarney/react-countdown'>https://github.com/timarney/react-countdown</a>
+        </div>
       </div>
     )
   }
