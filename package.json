@@ -15,7 +15,7 @@
     "reactjs",
     "mobx"
   ],
-  "author": "Tim Arney <mweststrate@gmail.com> (https://github.com/timarney)",
+  "author": "Tim Arney (https://github.com/timarney)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/timarney/react-countdown/issues"
